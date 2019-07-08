@@ -44,6 +44,39 @@ Input: "256.256.256.256"
 Output: "Neither"
 
 Explanation: This is neither a IPv4 address nor a IPv6 address.
+
+============================================================
+Test Cases
+"02001:0db8:85a3:0000:0000:8a2e:0370:7334"
+
+"2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+
+"1e1.4.5.6"
+
+"2001:0db8:85a3:0:0:8A2E:0370:7334:"
+
+"256.256.256.256"
+
+"1.1.1.1."
+
+"12.12.12.12.12"
+
+"2001:0db8:85a3:00000:0:8A2E:0370:7334"
+
+"20EE:FGb8:85a3:0:0:8A2E:0370:7334" -invalid
+
+"2001:0db8:85a3:0:0:8A2E:0370:7334" - valid
+
+"20EE:Fb8:85a3:0:0:8A2E:0370:7334" - valid
+
+"2001:db8:85a3:0::8a2E:0370:7334" - Invalid
+
+"1081:db8:85a3:01:-0:8A2E:0370:7334" - Invalid
+
+"15.16.-0.1" - Invalid
+
+"192.0.0.1" - Valid
+
  * */
 class Solution {
 	public String validIPAddress(String IP) {
